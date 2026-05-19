@@ -40,7 +40,7 @@
         }
 
         .page {
-            max-width: 600px;
+            max-width: 740px;
             margin: 0 auto;
             padding: 40px 20px 60px;
         }
@@ -113,26 +113,23 @@
             color: var(--muted);
         }
 
-        /* Shared Multi-Column Row Configuration */
-        .item-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 20px;
-            gap: 24px;
+        /* Stacked Layout Block */
+        .item-block {
+            margin-bottom: 24px;
         }
 
-        .left-col {
-            flex: 1;
+        .item-title {
             font-size: 15px;
-            font-weight: 400;
+            font-weight: 700;
             color: var(--text);
+            margin-bottom: 4px;
         }
 
-        .right-col {
-            width: 440px;
-            flex-shrink: 0;
+        /* This rule shifts the details slightly to the right */
+        .item-details {
+            padding-left: 18px;
             font-size: 14px;
+            color: var(--text);
         }
 
         .authors,
@@ -143,6 +140,13 @@
 
         .venue {
             font-weight: 700;
+        }
+
+        /* Helper to break dates onto their own clean line inside details */
+        .date-line {
+            display: block;
+            color: var(--muted);
+            margin-top: 2px;
         }
     </style>
 </head>
@@ -162,11 +166,11 @@
                     and
                     <a href="https://www.jakobfoerster.com" target="_blank" rel="noopener noreferrer">Jakob
                         Foerster</a>.
-                    My research focuses on how we can scale Reinforcstrongent Learning to the real world. In line with
-                    the
+                    My research focuses on how we can scale Reinforcement Learning to the real world. In line with the
                     <a href="https://arxiv.org/pdf/2108.10273" target="_blank" rel="noopener noreferrer"><strong>Collect
                             and
-                            Infer</strong></a>, I'm interested in how we can extract maximally useful policies from
+                            Infer</strong></a> pipeline, I'm interested in how we can extract maximally useful policies
+                    from
                     large-scale offline data, and, conversely, how this can be used to guide intelligent data
                     collection.
                 </p>
@@ -176,7 +180,7 @@
                     <a href="https://arxiv.org/pdf/1909.01540" target="_blank" rel="noopener noreferrer">data and
                         computation</a>.
                     Rather than relying on rigid, manually engineered priors and heuristics, successful architectures
-                    strongploy general-purpose inductive biases that support scalable learning, such as
+                    employ general-purpose inductive biases that support scalable learning, such as
                     <a href="http://vision.stanford.edu/cs598_spring07/papers/Lecun98.pdf" target="_blank"
                         rel="noopener noreferrer">Convolutional Neural Networks</a>
                     in
@@ -192,12 +196,12 @@
 
                 <p>
                     <a href="https://arxiv.org/pdf/2005.01643" target="_blank"
-                        rel="noopener noreferrer"><strong>Offline</strong> Reinforcstrongent Learning</a>
+                        rel="noopener noreferrer"><strong>Offline</strong> Reinforcement Learning</a>
                     offers the potential to train effective decision-making agents from large datasets, but I would
                     argue that a scalable inductive bias for RL has not yet been found.
                     My current intuition is that it lies in hierarchy, which allows for both
                     <a href="http://www.incompleteideas.net/papers/SPS-98.pdf" target="_blank"
-                        rel="noopener noreferrer">tstrongporal</a> abstraction
+                        rel="noopener noreferrer">temporal</a> abstraction
                     and representational abstraction.
                 </p>
             </div>
@@ -232,9 +236,9 @@
                     rel="noopener noreferrer">CV</a> for full list)
             </div>
 
-            <article class="itstrong-row">
-                <div class="left-col">Abstraction for Offline Goal-Conditioned Reinforcement Learning</div>
-                <div class="right-col">
+            <div class="item-block">
+                <div class="item-title">Abstraction for Offline Goal-Conditioned Reinforcement Learning</div>
+                <div class="item-details">
                     <div class="authors"><strong>Clarisse Wibault</strong>, Alexander Goldie, Antonio Villares, Maike
                         Osborne, Jakob Foerster</div>
                     <div class="venue">Preprint</div>
@@ -246,12 +250,12 @@
                             Post</a>
                     </div>
                 </div>
-            </article>
+            </div>
 
-            <article class="item-row">
-                <div class="left-col">Recurrent Structural Policy Gradient for Partially Observable Mean Field Games
+            <div class="item-block">
+                <div class="item-title">Recurrent Structural Policy Gradient for Partially Observable Mean Field Games
                 </div>
-                <div class="right-col">
+                <div class="item-details">
                     <div class="authors"><strong>Clarisse Wibault</strong>, Johannes Forkel, Sebastian Towers, Tiphaine
                         Wibault, Juan Duque, George Whittle, Andreas Schaab, Yucheng Yang, Chiyuan Wang, Maike Osborne,
                         Benjamin Moll, Jakob Foerster</div>
@@ -266,11 +270,11 @@
                             Post</a>
                     </div>
                 </div>
-            </article>
+            </div>
 
-            <article class="item-row">
-                <div class="left-col">Fully Offline Reinforcement Learning</div>
-                <div class="right-col">
+            <div class="item-block">
+                <div class="item-title">Fully Offline Reinforcement Learning</div>
+                <div class="item-details">
                     <div class="authors">Mattie Fellows*, <strong>Clarisse Wibault*</strong>, Uljad Berdica, Johannes
                         Forkel, Maike Osborne, Jakob Foerster</div>
                     <div class="venue">RLC 2026</div>
@@ -281,14 +285,14 @@
                             rel="noopener noreferrer">Code</a>
                     </div>
                 </div>
-            </article>
+            </div>
         </section>
 
         <section class="section">
             <h2>Talks</h2>
-            <div class="item-row">
-                <div class="left-col">Structural Policy Gradient for Mean Field Games</div>
-                <div class="right-col">
+            <div class="item-block">
+                <div class="item-title">Structural Policy Gradient for Mean Field Games</div>
+                <div class="item-details">
                     Benjamin Moll &amp; <strong>Clarisse Wibault</strong>,
                     Google DeepMind, London <span class="blog-date">(February 2026)</span>
                 </div>
@@ -297,17 +301,17 @@
 
         <section class="section">
             <h2>Education</h2>
-            <div class="item-row">
-                <div class="left-col">University of Oxford</div>
-                <div class="right-col">
+            <div class="item-block">
+                <div class="item-title">University of Oxford</div>
+                <div class="item-details">
                     PhD Student at <a href="https://foersterlab.com" target="_blank" rel="noopener noreferrer">FLAIR</a>
                     and <a href="https://eng.ox.ac.uk/about/machine-learning-research-group" target="_blank"
                         rel="noopener noreferrer">MLRG</a> <span class="blog-date">(Oct 2024 - Present)</span>
                 </div>
             </div>
-            <div class="item-row">
-                <div class="left-col">University of Oxford</div>
-                <div class="right-col">
+            <div class="item-block">
+                <div class="item-title">University of Oxford</div>
+                <div class="item-details">
                     MEng <span class="blog-date">(Oct 2020 - June 2024)</span>
                 </div>
             </div>
@@ -315,29 +319,32 @@
 
         <section class="section">
             <h2>Work Experience</h2>
-            <div class="item-row">
-                <div class="left-col">College Tutor</div>
-                <div class="right-col">
-                    Magdalen College, University of Oxford, Oxford, England <span class="blog-date">(Oct 2024 - June
-                        2026)</span>
+            <div class="item-block">
+                <div class="item-title">College Tutor</div>
+                <div class="item-details">
+                    Magdalen College, University of Oxford, Oxford, England
+                    <span class="date-line">Oct 2024 - June 2026</span>
                 </div>
             </div>
-            <div class="item-row">
-                <div class="left-col">VIRDX QuantCo</div>
-                <div class="right-col">
-                    Munich, Germany <span class="blog-date">(July - Oct 2025)</span>
+            <div class="item-block">
+                <div class="item-title">VIRDX QuantCo</div>
+                <div class="item-details">
+                    Munich, Germany
+                    <span class="date-line">July - Oct 2025</span>
                 </div>
             </div>
-            <div class="item-row">
-                <div class="left-col">BNP Paribas</div>
-                <div class="right-col">
-                    London, UK <span class="blog-date">(June - Aug 2023)</span>
+            <div class="item-block">
+                <div class="item-title">BNP Paribas</div>
+                <div class="item-details">
+                    London, UK
+                    <span class="date-line">June - Aug 2023</span>
                 </div>
             </div>
-            <div class="item-row">
-                <div class="left-col">BMW Group</div>
-                <div class="right-col">
-                    Munich, Germany <span class="blog-date">(Jun - Aug 2022)</span>
+            <div class="item-block">
+                <div class="item-title">BMW Group</div>
+                <div class="item-details">
+                    Munich, Germany
+                    <span class="date-line">Jun - Aug 2022</span>
                 </div>
             </div>
         </section>
