@@ -64,16 +64,32 @@
             margin-bottom: 24px;
         }
 
+        /* Flexbox container to align intro text and profile image */
+        .intro-container {
+            display: flex;
+            gap: 24px;
+            align-items: flex-start;
+            text-align: justify;
+            margin-bottom: 24px;
+        }
+
         .intro {
-            max-width: 100%;
-            margin: 0 0 24px;
+            flex: 1;
             font-size: 15px;
             line-height: 1.5;
-            text-align: justify;
         }
 
         .intro p {
+            margin-top: 0;
             margin-bottom: 16px;
+        }
+
+        /* Styling for the profile image */
+        .profile-pic {
+            width: 160px;
+            height: auto;
+            border-radius: 4px;
+            object-fit: cover;
         }
 
         .links {
@@ -152,6 +168,19 @@
             font-size: 13px;
             color: var(--light);
         }
+
+        /* Responsive design for smaller screens */
+        @media (max-width: 520px) {
+            .intro-container {
+                flex-direction: column-reverse;
+                align-items: center;
+                text-align: left;
+            }
+            .profile-pic {
+                width: 140px;
+                margin-bottom: 16px;
+            }
+        }
     </style>
 </head>
 
@@ -162,52 +191,56 @@
             <h1 class="name">Clarisse Wibault</h1>
             <div class="pronunciation">[Pronunciation: "clah-rees vi-bo"]</div>
 
-            <div class="intro">
-                <p>
-                    Hi, I'm Clarisse! I'm a Ph.D. student at Oxford supervised by
-                    <a href="https://www.robots.ox.ac.uk/~mosb/" target="_blank" rel="noopener noreferrer">Maike
-                        Osborne</a>
-                    and
-                    <a href="https://www.jakobfoerster.com" target="_blank" rel="noopener noreferrer">Jakob
-                        Foerster</a>.
-                    My research focuses on how we can scale Reinforcement Learning to the real world. In line with the
-                    <a href="https://arxiv.org/pdf/2108.10273" target="_blank" rel="noopener noreferrer"><strong>Collect
-                            and
-                            Infer</strong></a> pipeline, I'm interested in how we can extract maximally useful policies
-                    from
-                    large-scale offline data, and, conversely, how this can be used to guide intelligent data
-                    collection.
-                </p>
+            <div class="intro-container">
+                <div class="intro">
+                    <p>
+                        Hi, I'm Clarisse! I'm a Ph.D. student at Oxford supervised by
+                        <a href="https://www.robots.ox.ac.uk/~mosb/" target="_blank" rel="noopener noreferrer">Maike
+                            Osborne</a>
+                        and
+                        <a href="https://www.jakobfoerster.com" target="_blank" rel="noopener noreferrer">Jakob
+                            Foerster</a>.
+                        My research focuses on how we can scale Reinforcement Learning to the real world. In line with the
+                        <a href="https://arxiv.org/pdf/2108.10273" target="_blank" rel="noopener noreferrer"><strong>Collect
+                                and
+                                Infer</strong></a> pipeline, I'm interested in how we can extract maximally useful policies
+                        from
+                        large-scale offline data, and, conversely, how this can be used to guide intelligent data
+                        collection.
+                    </p>
 
-                <p>
-                    Recent progress in Machine Learning has been driven by methods that scale effectively with
-                    <a href="https://arxiv.org/pdf/1909.01540" target="_blank" rel="noopener noreferrer">data and
-                        computation</a>.
-                    Rather than relying on rigid, manually engineered priors and heuristics, successful architectures
-                    employ general-purpose inductive biases that support scalable learning, such as
-                    <a href="http://vision.stanford.edu/cs598_spring07/papers/Lecun98.pdf" target="_blank"
-                        rel="noopener noreferrer">Convolutional Neural Networks</a>
-                    in
-                    <a href="http://vision.stanford.edu/cs598_spring07/papers/Lecun98.pdf" target="_blank"
-                        rel="noopener noreferrer">Computer Vision</a>
-                    and
-                    <a href="https://arxiv.org/pdf/1706.03762" target="_blank"
-                        rel="noopener noreferrer">Transformers</a>
-                    in
-                    <a href="https://arxiv.org/pdf/1409.3215" target="_blank" rel="noopener noreferrer">Natural Language
-                        Processing</a>.
-                </p>
+                    <p>
+                        Recent progress in Machine Learning has been driven by methods that scale effectively with
+                        <a href="https://arxiv.org/pdf/1909.01540" target="_blank" rel="noopener noreferrer">data and
+                            computation</a>.
+                        Rather than relying on rigid, manually engineered priors and heuristics, successful architectures
+                        employ general-purpose inductive biases that support scalable learning, such as
+                        <a href="http://vision.stanford.edu/cs598_spring07/papers/Lecun98.pdf" target="_blank"
+                            rel="noopener noreferrer">Convolutional Neural Networks</a>
+                        in
+                        <a href="http://vision.stanford.edu/cs598_spring07/papers/Lecun98.pdf" target="_blank"
+                            rel="noopener noreferrer">Computer Vision</a>
+                        and
+                        <a href="https://arxiv.org/pdf/1706.03762" target="_blank"
+                            rel="noopener noreferrer">Transformers</a>
+                        in
+                        <a href="https://arxiv.org/pdf/1409.3215" target="_blank" rel="noopener noreferrer">Natural Language
+                            Processing</a>.
+                    </p>
 
-                <p>
-                    <a href="https://arxiv.org/pdf/2005.01643" target="_blank"
-                        rel="noopener noreferrer"><strong>Offline</strong> Reinforcement Learning</a>
-                    offers the potential to train effective decision-making agents from large datasets, but I would
-                    argue that a scalable inductive bias for RL has not yet been found.
-                    My current intuition is that it lies in hierarchy, which allows for both
-                    <a href="http://www.incompleteideas.net/papers/SPS-98.pdf" target="_blank"
-                        rel="noopener noreferrer">temporal</a> abstraction
-                    and representational abstraction.
-                </p>
+                    <p>
+                        <a href="https://arxiv.org/pdf/2005.01643" target="_blank"
+                            rel="noopener noreferrer"><strong>Offline</strong> Reinforcement Learning</a>
+                        offers the potential to train effective decision-making agents from large datasets, but I would
+                        argue that a scalable inductive bias for RL has not yet been found.
+                        My current intuition is that it lies in hierarchy, which allows for both
+                        <a href="http://www.incompleteideas.net/papers/SPS-98.pdf" target="_blank"
+                            rel="noopener noreferrer">temporal</a> abstraction
+                        and representational abstraction.
+                    </p>
+                </div>
+                
+                <img src="ClarisseWibault.jpeg" alt="Clarisse Wibault" class="profile-pic">
             </div>
 
             <div class="links">
