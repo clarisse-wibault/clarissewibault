@@ -21,74 +21,125 @@
             padding: 0;
             background: #ffffff;
             color: var(--text);
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
             font-size: 15px;
             line-height: 1.5;
         }
 
+        a {
+            color: var(--link-blue);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        strong {
+            font-weight: 700;
+        }
+
         .page {
-            max-width: 780px;
+            max-width: 740px;
             margin: 0 auto;
-            padding: 24px 20px 48px;
+            padding: 40px 20px 60px;
         }
 
         .hero {
-            text-align: left;
-            margin-top: 0;
+            text-align: center;
+            margin-bottom: 40px;
         }
 
         .name {
-            font-size: 32px;
+            font-size: 42px;
             line-height: 1.2;
-            font-weight: 600;
-            letter-spacing: 0;
-            margin: 0 0 14px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin: 0 0 8px;
+        }
+
+        .pronunciation {
+            color: var(--muted);
+            font-size: 15px;
+            margin-bottom: 24px;
         }
 
         .intro {
             max-width: 100%;
-            margin: 0;
+            margin: 0 0 24px;
             font-size: 15px;
             line-height: 1.5;
+            text-align: justify;
+        }
+
+        .intro p {
+            margin-bottom: 16px;
         }
 
         .links {
-            margin-top: 10px;
             font-size: 15px;
+            margin-top: 16px;
+        }
+
+        .links span,
+        .pub-links span {
+            color: var(--light);
+            padding: 0 4px;
         }
 
         .section {
-            margin-top: 40px;
+            margin-top: 45px;
         }
 
+        /* Clean Ultra-Thin look for Section Headers */
         .section h2 {
-            font-size: 24px;
-            font-weight: 600;
+            font-size: 36px;
+            font-weight: 200;
             letter-spacing: 0;
-            margin: 0 0 10px;
+            margin: 0 0 16px;
         }
 
-        .subtitle,
-        .blog-item,
-        .pub-title,
-        .authors,
-        .venue,
-        .pub-links,
-        .pub-desc,
-        .edu-item,
-        .talk-item,
-        .work-item,
-        .compact p {
-            font-size: 15px;
+        .subtitle {
+            font-size: 14px;
+            color: var(--muted);
+            margin-bottom: 16px;
+        }
+
+        .blog-item {
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+
+        .blog-date {
+            color: var(--muted);
+        }
+
+        /* Clean vertical stack for publication rows */
+        .pub {
+            margin-bottom: 24px;
         }
 
         .pub-title {
-            font-weight: 600;
+            font-size: 17px;
+            font-weight: 500;
+            color: var(--text);
             margin-bottom: 4px;
         }
 
-        .pub {
-            margin: 18px 0 22px;
+        .authors,
+        .venue,
+        .pub-links {
+            font-size: 14px;
+            margin-bottom: 2px;
+        }
+
+        .venue {
+            font-weight: 700;
+        }
+
+        .compact-item {
+            margin-bottom: 12px;
+            font-size: 15px;
         }
     </style>
 </head>
@@ -98,11 +149,11 @@
 
         <section class="hero">
             <h1 class="name">Clarisse Wibault</h1>
+            <div class="pronunciation">[Pronunciation: "clah-rees vi-bo"]</div>
 
             <div class="intro">
-
                 <p>
-                    Hello, I'm Clarisse! I'm a Ph.D. student at Oxford supervised by
+                    Hi, I'm Clarisse! I'm a Ph.D. student at Oxford supervised by
                     <a href="https://www.robots.ox.ac.uk/~mosb/" target="_blank" rel="noopener noreferrer">Maike
                         Osborne</a>
                     and
@@ -134,197 +185,124 @@
                         rel="noopener noreferrer"><em>Offline</em> Reinforcement Learning</a>
                     offers the potential to train effective decision-making agents from large datasets, but I would
                     argue that a scalable inductive bias for RL has not yet been found.
-                    My current intuition is that it lies in hierarchy, which allows for both temporal
+                    My current intuition is that it lies in hierarchy, which allows for both
                     <a href="http://www.incompleteideas.net/papers/SPS-98.pdf" target="_blank"
-                        rel="noopener noreferrer">abstraction</a>
+                        rel="noopener noreferrer">temporal</a> abstraction
                     and representational abstraction.
                 </p>
-
             </div>
 
             <div class="links">
-                <a href="mailto:clwibault@gmail.com">Email</a><span>|</span>
-
-                <a href="Clarisse_Wibault_CV.pdf" target="_blank" rel="noopener noreferrer">CV</a><span>|</span>
-
+                <a href="mailto:clwibault@gmail.com">Email </a><span>|</span>
+                <a href="Clarisse_Wibault_CV.pdf" target="_blank" rel="noopener noreferrer">CV </a><span>|</span>
                 <a href="https://www.linkedin.com/in/clarisse-wibault-8473b7234/" target="_blank"
-                    rel="noopener noreferrer">LinkedIn</a><span>|</span>
-
-                <a href="https://x.com/ClarisseWibault" target="_blank"
-                    rel="noopener noreferrer">Twitter</a><span>|</span>
-
+                    rel="noopener noreferrer">LinkedIn </a><span>|</span>
+                <a href="https://x.com/ClarisseWibault" target="_blank" rel="noopener noreferrer">Twitter
+                </a><span>|</span>
                 <a href="https://scholar.google.com/citations?user=kGeNzbEAAAAJ&hl" target="_blank"
-                    rel="noopener noreferrer">Google Scholar</a><span>|</span>
-
+                    rel="noopener noreferrer">Google Scholar </a><span>|</span>
                 <a href="https://github.com/CWibault" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
         </section>
 
         <section class="section">
             <h2>Blog posts</h2>
-
             <div class="blog-item">
                 <a href="https://github.com/clarisse-wibault/rspg.github.io" target="_blank" rel="noopener noreferrer">
                     Recurrent Structural Policy Gradient for Partially Observable Mean Field Games
                 </a>
+                <span class="blog-date">(Feb 2026)</span>
             </div>
         </section>
 
         <section class="section">
             <h2>Publications</h2>
-
             <div class="subtitle">
-                (<sup>*</sup>: equal contribution)
+                (*: equal contribution)
             </div>
 
             <article class="pub">
-                <div class="pub-title">
-                    Abstraction for Offline Goal-Conditioned Reinforcement Learning
-                </div>
-
-                <div class="authors">
-                    <strong>Clarisse Wibault</strong>, Alexander Goldie, Antonio Villares,
-                    Maike Osborne, Jakob Foerster
-                </div>
-
+                <div class="pub-title">Abstraction for Offline Goal-Conditioned Reinforcement Learning</div>
+                <div class="authors"><strong>Clarisse Wibault</strong>, Alexander Goldie, Antonio Villares, Maike
+                    Osborne, Jakob Foerster</div>
                 <div class="venue">Preprint</div>
-
                 <div class="pub-links">
-                    <a href="https://arxiv.org" target="_blank" rel="noopener noreferrer">Paper </a><span>|</span>
-
-                    <a href="https://github.com/CWibault/arl" target="_blank" rel="noopener noreferrer">Code
-                    </a><span>|</span>
-
-                    <a href="https://github.com/clarisse-wibault/arl" target="_blank" rel="noopener noreferrer">Blog
-                    </a>
+                    <a href="https://arxiv.org" target="_blank" rel="noopener noreferrer">paper</a><span>|</span>
+                    <a href="https://github.com/CWibault/arl" target="_blank"
+                        rel="noopener noreferrer">code</a><span>|</span>
+                    <a href="https://github.com/clarisse-wibault/arl" target="_blank" rel="noopener noreferrer">blog
+                        post</a>
                 </div>
             </article>
 
             <article class="pub">
-                <div class="pub-title">
-                    Recurrent Structural Policy Gradient for Partially Observable Mean Field Games
+                <div class="pub-title">Recurrent Structural Policy Gradient for Partially Observable Mean Field Games
                 </div>
-
-                <div class="authors">
-                    <strong>Clarisse Wibault</strong>, Mattie Fellows, Uljad Berdica,
-                    Johannes Forkel, Maike Osborne, Jakob Foerster
-                </div>
-
+                <div class="authors"><strong>Clarisse Wibault</strong>, Johannes Forkel, Sebastian Towers, Tiphaine
+                    Wibault, Juan Duque, George Whittle, Andreas Schaab, Yucheng Yang, Chiyuan Wang, Maike Osborne,
+                    Benjamin Moll, Jakob Foerster</div>
                 <div class="venue">ICML 2026 (Spotlight)</div>
-
                 <div class="pub-links">
                     <a href="https://arxiv.org/pdf/2602.20141" target="_blank" rel="noopener noreferrer">Paper
                     </a><span>|</span>
-
                     <a href="https://github.com/CWibault/mfax" target="_blank" rel="noopener noreferrer">Code
                     </a><span>|</span>
-
-                    <a href="https://github.com/clarisse-wibault/rspg" target="_blank" rel="noopener noreferrer">Blog
-                    </a>
+                    <a href="https://github.com/clarisse-wibault/rspg" target="_blank" rel="noopener noreferrer">blog
+                        post</a>
                 </div>
             </article>
 
             <article class="pub">
-                <div class="pub-title">
-                    Fully Offline Reinforcement Learning
-                </div>
-
-                <div class="authors">
-                    Mattie Fellows<sup>*</sup>,
-                    <strong>Clarisse Wibault<sup>*</sup></strong>,
-                    Uljad Berdica, Johannes Forkel, Maike Osborne, Jakob Foerster
-                </div>
-
+                <div class="pub-title">Fully Offline Reinforcement Learning</div>
+                <div class="authors">Mattie Fellows*, <strong>Clarisse Wibault*</strong>, Uljad Berdica, Johannes
+                    Forkel, Maike Osborne, Jakob Foerster</div>
                 <div class="venue">RLC 2026</div>
-
                 <div class="pub-links">
                     <a href="https://arxiv.org/pdf/2505.22442v1" target="_blank" rel="noopener noreferrer">Paper
                     </a><span>|</span>
-
-                    <a href="https://github.com/CWibault/sorel_torel" target="_blank" rel="noopener noreferrer">Code</a>
+                    <a href="https://github.com/CWibault/sorel_torel" target="_blank" rel="noopener noreferrer">Code
+                    </a>
                 </div>
             </article>
         </section>
 
         <section class="section">
             <h2>Talks</h2>
-
-            <div class="section-block compact">
-                <p class="talk-item">
-                    <strong>Structural Policy Gradient for Mean Field Games</strong>,
-                    Benjamin Moll &amp; <strong>Clarisse Wibault</strong>,
-                    Google DeepMind, London, February 2026
-                </p>
+            <div class="compact-item">
+                <strong>Structural Policy Gradient for Mean Field Games</strong>,
+                Benjamin Moll &amp; <strong>Clarisse Wibault</strong>,
+                Google DeepMind, London, February 2026
             </div>
         </section>
 
         <section class="section">
             <h2>Education</h2>
-
-            <div class="section-block compact">
-                <p class="edu-item">
-                    <strong>University of Oxford</strong>
-                </p>
-
-                <p class="edu-item">
-                    PhD Student at
-                    <a href="https://foersterlab.com" target="_blank" rel="noopener noreferrer">FLAIR</a>
-                    and
-                    <a href="https://eng.ox.ac.uk/about/machine-learning-research-group" target="_blank"
-                        rel="noopener noreferrer">MLRG</a>
-                    (Oct 2024 - Present)
-                </p>
-
-                <p class="edu-item">
-                    MEng (Oct 2020 - June 2024)
-                </p>
+            <div class="compact-item">
+                <strong>University of Oxford</strong> — PhD Student at <a href="https://foersterlab.com" target="_blank"
+                    rel="noopener noreferrer">FLAIR</a> and <a
+                    href="https://eng.ox.ac.uk/about/machine-learning-research-group" target="_blank"
+                    rel="noopener noreferrer">MLRG</a> (Oct 2024 - Present)
+            </div>
+            <div class="compact-item">
+                <strong>University of Oxford</strong> — MEng (Oct 2020 - June 2024)
             </div>
         </section>
 
         <section class="section">
             <h2>Work Experience</h2>
-
-            <div class="section-block compact">
-                <p class="work-item">
-                    <strong>College Tutor</strong>
-                </p>
-
-                <p class="work-item">
-                    Magdalen College, University of Oxford, Oxford, England
-                    (Oct 2024 - June 2026)
-                </p>
+            <div class="compact-item">
+                <strong>College Tutor</strong> — Magdalen College, University of Oxford, Oxford, England (Oct 2024 -
+                June 2026)
             </div>
-
-            <div class="section-block compact">
-                <p class="work-item">
-                    <strong>VIRDX QuantCo</strong>
-                </p>
-
-                <p class="work-item">
-                    Munich, Germany (July - Oct 2025)
-                </p>
+            <div class="compact-item">
+                <strong>VIRDX QuantCo</strong> — Munich, Germany (July - Oct 2025)
             </div>
-
-            <div class="section-block compact">
-                <p class="work-item">
-                    <strong>BNP Paribas</strong>
-                </p>
-
-                <p class="work-item">
-                    London, UK (June - Aug 2023)
-                </p>
+            <div class="compact-item">
+                <strong>BNP Paribas</strong> — London, UK (June - Aug 2023)
             </div>
-
-            <div class="section-block compact">
-                <p class="work-item">
-                    <strong>BMW Group</strong>
-                </p>
-
-                <p class="work-item">
-                    Munich, Germany (Jun - Aug 2022)
-                </p>
+            <div class="compact-item">
+                <strong>BMW Group</strong> — Munich, Germany (Jun - Aug 2022)
             </div>
-
         </section>
 
     </main>
